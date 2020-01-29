@@ -1,6 +1,6 @@
 # 0x0-shell_basics
 
-#### 0-current_working_directory# 0x0-shell_basics
+On this folder contain all comands for sheel basics 
 
 #### 0-current_working_directory
 ```
