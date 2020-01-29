@@ -1,2 +1,2 @@
-C#!/bin/bash
-ls -a ./ ../ /boot
+#!/bin/bash
+ls -a . .. /boot
