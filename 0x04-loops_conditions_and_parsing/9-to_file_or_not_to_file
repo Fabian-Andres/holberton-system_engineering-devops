@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # This script gives you information about the holbertonschool file.
 file="holbertonschool"
-if [ -e file ]; then
+if [ -e $file ]; then
     echo "holbertonschool file exists"
-    if [ -s file ]; then
+    if [ -s $file ]; then
         echo "holbertonschool file is not empty"
     else
         echo "holbertonschool file is empty"
