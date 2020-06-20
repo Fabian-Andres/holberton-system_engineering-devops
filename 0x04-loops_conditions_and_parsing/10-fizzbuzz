@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This script is FizzBuzz algorithm
+for (( i=1; i<101; i++ )); do
+    if [ $((i%3)) -eq 0 ] && [ $((i%5)) -eq 0 ]; then
+        echo "FizzBuzz"
+    fi
+
+    if [ $((i%3)) -eq 0 ]; then
+        echo "Fizz"
+    fi
+
+    if [ $((i%5)) -eq 0 ]; then
+        echo "Buzz"
+    fi
+    echo "$i"
+done
