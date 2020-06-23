@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# SIGTERM signal
+pkill -f 7-highlander
+
