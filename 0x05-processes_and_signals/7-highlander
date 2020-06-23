@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# SIGTERM function
 trap 'echo "I am invincible!!!"' SIGTERM
 while :
 do
