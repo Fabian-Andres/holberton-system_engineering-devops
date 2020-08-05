@@ -15,3 +15,13 @@ Requirements:
 -   `scp` must transfer the file to the user home directory `~/`
 -   Strict host key checking must be disabled when using `scp`
 
+#### 1\. Install nginx web server
+
+Web servers are the piece of software generating and serving HTML pages, let's install one!
+
+Requirements:
+
+-   Install `nginx` on your `web-01` server
+-   Nginx should be listening on port 80
+-   When querying Nginx at its root `/` with a GET request (requesting a page) using `curl`, it must return a page that contains the string `Holberton School`
+-   As an answer file, write a Bash script that configures a new Ubuntu machine to respect above requirements
