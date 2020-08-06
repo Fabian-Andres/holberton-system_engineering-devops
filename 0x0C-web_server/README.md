@@ -39,3 +39,27 @@ Requirement:
 -   provide the domain name only (example: `foobar.tech`), no subdomain (example: `www.foobar.tech`)
 -   configure your DNS records with an A entry so that your root domain points to your `web-01` IP address **Warning: the propagation of your records can take time (~1-2 hours)**
 -   go to [your profile](https://intranet.hbtn.io/rltoken/fYvJr4-HV1WPnfB7HCue_Q "your profile") and enter your domain in the `Project website url` field
+
+#### 3\. Redirection mandatory
+
+Readme:
+
+-   [Replace a line with multiple lines with sed](https://intranet.hbtn.io/rltoken/Afg1zCifjmIygL1se0ghhg "Replace a line with multiple lines with sed")
+
+Configure your Nginx server so that `/redirect_me` is redirecting to another page.
+
+Requirements:
+
+-   The redirection must be a "301 Moved Permanently"
+-   You answer file should be a Bash script containing commands to automatically configure a Ubuntu machine to respect above requirements
+-   Using what you did with `1-install_nginx_web_server`, write `3-redirection` so that it configures a brand new Ubuntu machine to the requirements asked in this task
+
+#### 4\. Not found page 404 mandatory
+
+Configure your Nginx server to have a custom 404 page that contains the string `Ceci n'est pas une page`.
+
+Requirements:
+
+-   The page must return an HTTP 404 error code
+-   The page must contain the string `Ceci n'est pas une page`
+-   Using what you did with `3-redirection`, write `4-not_found_page_404` so that it configures a brand new Ubuntu machine to the requirements asked in this task
