@@ -2,7 +2,7 @@
 # not found
 sudo apt-get update
 sudo apt-get -y install nginx
-sudo echo "Holberton School" > '/var/www/html/404.html'
+sudo echo "Ceci n'est pas une pag" > '/var/www/html/404.html'
 old_redirect='permanent;'
 new_redirect='permanent;\n\terror_page 404 /404.html;'
 sudo sed -i "s/'$old_redirect'/'$new_redirect'/" /etc/nginx/sites-available/default
