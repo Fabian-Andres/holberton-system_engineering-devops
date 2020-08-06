@@ -2,10 +2,8 @@
 # not found
 sudo apt-get update
 sudo apt-get -y install 
-sudo ufw allow 'Nginx HTTP'
-echo "Holberton School" | sudo tee '/var/www/html/index.nginx-debian.html'
-echo "Ceci n'est pas une page" | sudo tee '/var/www/html/404.html'
-old_redirect="server_name _;"
-new_redirect="server_name _;\n\trewrite /redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;\n\terror_page 404 /404.html;"
-sudo sed -i 's|'"$old_redirect"'|'"$new_redirect"'|' /etc/nginx/sites-enabled/default
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+new_redirect="server_name _;\n\trewrite /redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;\n\terror_page 404 /404.html;\n"
+sudo sed -i 's|server_name _;|'"$new_redirect"'|' /etc/nginx/sites-enabled/default
 sudo service nginx restart
