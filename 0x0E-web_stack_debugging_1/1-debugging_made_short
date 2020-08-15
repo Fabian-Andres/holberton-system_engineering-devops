@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Debugging made short
+sudo sed -i '21s|.8080 | 80 |' /etc/nginx/sites-enabled/default
+sudo sed -i '22s|.8080 |:80 |' /etc/nginx/sites-enabled/default
+sleep 1
+sudo service nginx start
