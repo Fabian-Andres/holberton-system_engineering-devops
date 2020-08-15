@@ -9,7 +9,7 @@ frontend firstbalance\n\t
     default_backend webservers\n\n
 backend webservers\n\t
     balance roundrobin\n\t
-    server 1666-web-01 35.243.178.160:80 check\n\t
-    server 1666-web-02 35.243.142.199:80 check\n"
+    server web-01 35.243.178.160:80 check\n\t
+    server web-02 35.243.142.199:80 check\n"
 echo -e "$new_redirect" >> /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
