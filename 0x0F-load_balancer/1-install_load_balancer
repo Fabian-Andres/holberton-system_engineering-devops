@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Install haproxy and add load balancer
+sudo apt-get update
+sudo apt-get -y install software-properties-common
+sudo add-apt-repository -y ppa:vbernat/haproxy-2.0
+sudo apt-get -y install haproxy=2.0.\*
+new_redirect="
+frontend firstbalance\n\t
+    bind *:80\n\t
+    mode http\n\t
+    option forwardfor\n\t
+    default_backend webservers\n\n
+backend webservers\n\t
+    balance roundrobin\n\t
+    server 1666-web-01 35.243.178.160:80 check\n\t
+    server 1666-web-02 35.243.142.199:80 check\n"
+echo -e "$new_redirect" >> /etc/haproxy/haproxy.cfg
+sudo service haproxy restart
