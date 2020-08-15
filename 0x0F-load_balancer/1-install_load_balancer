@@ -6,7 +6,6 @@ new_redirect="
 frontend firstbalance\n\t
     bind *:80\n\t
     mode http\n\t
-    option forwardfor\n\t
     default_backend webservers\n\n
 backend webservers\n\t
     balance roundrobin\n\t
