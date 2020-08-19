@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# world wide web
+
+func2 () {
+
+    if [ "$2" ]
+    then
+        echo -n "The subdomain $2 " 
+        dig $2"."$1 | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print("is a", $4, "record and points to", $5)}'
+    else
+        dig "www."$1 | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print("The subdomain www is a", $4, "record and points to", $5)}'
+        dig "lb-01."$1 | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print("The subdomain lb-01 is a", $4, "record and points to", $5)}'
+        dig "web-01."$1 | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print("The subdomain web-01 is a", $4, "record and points to", $5)}'
+        dig "web-02."$1 | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print("The subdomain web-02 is a", $4, "record and points to", $5)}'
+    fi
+
+   return 0
+}
+
+func2 $1 $2
+
+exit 0
