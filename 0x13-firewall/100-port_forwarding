@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+redirect="# rules.before\n*nat\n:PREROUTING ACCEPT [0:0]\n-A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80\nCOMMIT\n"
+sudo sed -i 's|# rules.before|'"$redirect"'|' /etc/ufw/before.rules
+sudo service ufw restart
