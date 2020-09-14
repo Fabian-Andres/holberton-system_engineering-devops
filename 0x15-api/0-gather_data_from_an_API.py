@@ -36,14 +36,13 @@ if __name__ == "__main__":
         task_done = 0
         TASK_TITLE = ""
         for task in obj_task:
-            TASK_TITLE += "\t" + task["title"] + "\n"
             if task["completed"] is True:
+                TASK_TITLE += "\t" + task["title"] + "\n"
                 task_done += 1
 
         EMPLOYEE_NAME = obj_user["name"]
         NUMBER_OF_DONE_TASKS = task_done
         TOTAL_NUMBER_OF_TASKS = len(obj_task)
-        print("Employee %s is done with tasks(%d/%d):"
-              .format(EMPLOYEE_NAME, NUMBER_OF_DONE_TASKS,
-                      TOTAL_NUMBER_OF_TASKS))
-        print(TASK_TITLE, end="")
+        print("Employee %s is done with tasks(%d/%d):\n %s" %
+              (EMPLOYEE_NAME, NUMBER_OF_DONE_TASKS,
+               TOTAL_NUMBER_OF_TASKS, TASK_TITLE), end="")
