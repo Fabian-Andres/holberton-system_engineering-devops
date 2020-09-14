@@ -17,6 +17,10 @@ if __name__ == "__main__":
         else:
             return float(n).is_integer()
 
+    # Check len
+    if len(sys.argv) < 2:
+        sys.exit()
+
     n_id = sys.argv[1]
 
     if is_integer(n_id):
