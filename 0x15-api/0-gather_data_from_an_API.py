@@ -3,8 +3,8 @@
 Funtion to gather data from an API
 """
 import json
-import sys
 import requests
+import sys
 
 
 if __name__ == "__main__":
@@ -37,12 +37,12 @@ if __name__ == "__main__":
         TASK_TITLE = ""
         for task in obj_task:
             if task["completed"] is True:
-                TASK_TITLE += "\t" + task["title"] + "\n"
+                TASK_TITLE += "\t " + task["title"] + "\n"
                 task_done += 1
 
-        EMPLOYEE_NAME = obj_user["name"]
-        NUMBER_OF_DONE_TASKS = task_done
-        TOTAL_NUMBER_OF_TASKS = len(obj_task)
+        E_NAME = obj_user["name"]
+        DONE_TASKS = task_done
+        TOTAL_TASKS = len(obj_task)
         print("Employee %s is done with tasks(%d/%d):\n %s" %
-              (EMPLOYEE_NAME, NUMBER_OF_DONE_TASKS,
-               TOTAL_NUMBER_OF_TASKS, TASK_TITLE), end="")
+              (E_NAME, DONE_TASKS,
+               TOTAL_TASKS, TASK_TITLE), end="")
