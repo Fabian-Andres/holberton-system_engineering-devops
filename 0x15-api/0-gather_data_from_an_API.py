@@ -47,6 +47,5 @@ if __name__ == "__main__":
         E_NAME = obj_user["name"]
         DONE_TASKS = task_done
         TOTAL_TASKS = len(obj_task)
-        print("Employee %s is done with tasks(%d/%d):\n %s" %
-              (E_NAME, DONE_TASKS,
-               TOTAL_TASKS, TASK_TITLE), end="")
+        print("Employee %s is done with tasks(%d/%d):\n%s" %
+              (E_NAME, DONE_TASKS, TOTAL_TASKS, TASK_TITLE), end="")
