@@ -8,14 +8,6 @@ import sys
 
 
 if __name__ == "__main__":
-    # Check if number is ingeter
-    def is_integer(n):
-        try:
-            float(n)
-        except ValueError:
-            return False
-        else:
-            return float(n).is_integer()
 
     # URL's to get all information
     url = 'https://jsonplaceholder.typicode.com'
