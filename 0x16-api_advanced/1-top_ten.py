@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    Funtion that print number of subscribers if subredit exist
+    Funtion that print title of first 10 hot post
 """
 import json
 import requests
