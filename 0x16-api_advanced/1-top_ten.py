@@ -16,6 +16,7 @@ def top_ten(subreddit):
     r_subreddit = requests.get(url_subreddit, headers=headers)
     if r_subreddit.status_code != 200:
         print('None')
+        return 0
 
     # Set string to JSON
     obj_subreddit = r_subreddit.json()
