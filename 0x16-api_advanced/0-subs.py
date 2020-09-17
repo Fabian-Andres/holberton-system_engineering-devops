@@ -20,7 +20,7 @@ def number_of_subscribers(subreddit):
     obj_subreddit = r_subreddit.json()
 
     # Print number of subscribers
-    if 'subscribers' in obj_subreddit['data']:
+    if r_subreddit.status_code == 200:
         subscribers = obj_subreddit['data']['subscribers']
         return (subscribers)
     else:
